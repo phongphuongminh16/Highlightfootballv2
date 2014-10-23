@@ -45,6 +45,7 @@ public class MainActivity extends Activity {
 				.getActionView();
 		searchView.setSearchableInfo(searchManager
 				.getSearchableInfo(getComponentName()));
+		searchView.setQueryHint("input team or player");
 
 		return super.onCreateOptionsMenu(menu);
 

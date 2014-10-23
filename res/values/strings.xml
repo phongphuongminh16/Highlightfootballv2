@@ -17,4 +17,8 @@
     <string name="tag">Tag: </string>
     <string name="tag_video">MU,CHELSEA </string>
 
+    <!-- SearchResultActivy -->
+    <string name="activity_SearchResult_title_1">Tìm thấy </string>
+    <string name="activity_SearchResult_title_2">video với  </string>
+
 </resources>
