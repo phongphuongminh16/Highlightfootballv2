@@ -54,6 +54,8 @@ public class FragmentNow extends Fragment {
 	private String[] mangisYoutube = new String[25];
 	private Bitmap[] mangiconleft = new Bitmap[25];
 	private Bitmap[] mangiconright = new Bitmap[25];
+	// Minh them vao mang video
+	private String[] mangId = new String[25];
 	int gioihan;
 	int dem = 0;
 	// --------------------------------------
@@ -90,6 +92,7 @@ public class FragmentNow extends Fragment {
 					link1.putString("link", manglink[position]);
 					link1.putString("name", mangname[position]);
 					link1.putString("type", mangtype[position]);
+					link1.putString("id", mangId[position]);// minh them vao
 					intentYoutube.putExtras(link1);
 					startActivity(intentYoutube);
 				} else {
@@ -99,6 +102,7 @@ public class FragmentNow extends Fragment {
 					link2.putString("link", manglink[position]);
 					link2.putString("name", mangname[position]);
 					link2.putString("type", mangtype[position]);
+					link2.putString("id", mangId[position]);// minh them vao
 					intentvideoview.putExtras(link2);
 					startActivity(intentvideoview);
 				}
@@ -129,7 +133,7 @@ public class FragmentNow extends Fragment {
 								JSONObject person = (JSONObject) response
 										.get(i);
 
-								// String _id = person.getString("_id");
+								String _id = person.getString("_id");
 								// String favorite =
 								// person.getString("favorite");
 
@@ -165,6 +169,7 @@ public class FragmentNow extends Fragment {
 										icon_guest, name_home, name_guest, time);
 								mydata.add(model);
 
+								mangId[i] = _id; // Minh them vao
 								mangguest[i] = name_guest;
 								manghome[i] = name_home;
 								mangtime[i] = time;

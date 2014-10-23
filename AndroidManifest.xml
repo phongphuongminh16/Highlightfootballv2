@@ -8,8 +8,6 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="20" />
 
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
