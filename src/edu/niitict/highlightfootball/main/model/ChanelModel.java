@@ -1,12 +1,19 @@
 package edu.niitict.highlightfootball.main.model;
 
-
 public class ChanelModel {
-	private String iconLogo;
+	private String iconLogo, id;// them vao id de post len server
 	private String nameVideo, nameTournament, time, view, tag, isYoutube, link;
 
 	public ChanelModel() {
 		super();
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getIsYoutube() {

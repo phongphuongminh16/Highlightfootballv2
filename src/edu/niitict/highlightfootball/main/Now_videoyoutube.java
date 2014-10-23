@@ -1,5 +1,10 @@
 package edu.niitict.highlightfootball.main;
 
+/**
+ * 
+ * QuangMinh them vao chuc cap nhat view
+ */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,15 +21,19 @@ import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 import edu.niitict.highlightfootball.R;
+import edu.niitict.highlightfootball.Utils.MakeJsonArrayRequest;
 
 public class Now_videoyoutube extends YouTubeBaseActivity implements
 		YouTubePlayer.OnInitializedListener {
+	public static final String TAG = Now_videoview.class.getSimpleName();
 
 	private YouTubePlayer YPlayer;
 	private static final String youtubeDeveloperkey = "AIzaSyAbPfz4sPqvwyLO3yXQtT34UiE9hX_AlqQ";
 	private static final int RECOVERY_DIALOG_REQUES = 1;
 	private String linkyoutube;
 	private TextView textname;
+	private String videoId;// minh them vao video id de post len server biet dc
+							// video dc xem chua?
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -38,6 +47,9 @@ public class Now_videoyoutube extends YouTubeBaseActivity implements
 		String name = link.getString("name");
 		String type = link.getString("type");
 
+		// quang minhlay video id
+		videoId = link.getString("id");
+
 		// Tach chuoi lay id youtube
 		String[] tokens = chuoi.split("=");
 		for (String token : tokens) {
@@ -50,6 +62,15 @@ public class Now_videoyoutube extends YouTubeBaseActivity implements
 		YouTubePlayerView youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
 		youTubeView.initialize(youtubeDeveloperkey, this);
 
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		// cap nhat so luong xem
+
+		MakeJsonArrayRequest.makeRequestUpdateView(videoId);
 	}
 
 	@Override

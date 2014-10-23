@@ -84,6 +84,7 @@ public class FragmentChanels extends Fragment {
 					Intent intentYoutube = new Intent(getActivity(),
 							Now_videoyoutube.class);
 					Bundle link1 = new Bundle();
+					link1.putString("id", arrChanel.get(position).getId());
 					link1.putString("link", arrChanel.get(position).getLink());
 					link1.putString("name", arrChanel.get(position)
 							.getNameVideo());
@@ -95,6 +96,7 @@ public class FragmentChanels extends Fragment {
 					Intent intentvideoview = new Intent(getActivity(),
 							Now_videoview.class);
 					Bundle link2 = new Bundle();
+					link2.putString("id", arrChanel.get(position).getId());
 					link2.putString("link", arrChanel.get(position).getLink());
 					link2.putString("name", arrChanel.get(position)
 							.getNameVideo());
@@ -130,7 +132,7 @@ public class FragmentChanels extends Fragment {
 								JSONObject person = (JSONObject) response
 										.get(i);
 
-								// String _id = person.getString("_id");
+								String _id = person.getString("_id");
 								// String favorite =
 								// person.getString("favorite");
 								//
@@ -159,9 +161,12 @@ public class FragmentChanels extends Fragment {
 								String thumnail = person.getString("thumnail");
 								String time = person.getString("time");
 
+								// Minh cho them id de post len server biet la
+								// video dc xem chua
 								ChanelModel chanelModel = new ChanelModel(
 										thumnail, name, name_type, time,
 										isView, tag, isYoutube, link);
+								chanelModel.setId(_id);
 								arrChanel.add(chanelModel);
 
 							}
