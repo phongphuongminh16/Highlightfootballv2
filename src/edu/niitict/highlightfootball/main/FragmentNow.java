@@ -34,8 +34,8 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 
 import edu.niitict.highlightfootball.R;
-import edu.niitict.highlightfootball.Adapter.Now_adapter;
 import edu.niitict.highlightfootball.Utils.Const;
+import edu.niitict.highlightfootball.adapter.Now_adapter;
 import edu.niitict.highlightfootball.app.AppController;
 import edu.niitict.highlightfootball.main.model.Now_model;
 

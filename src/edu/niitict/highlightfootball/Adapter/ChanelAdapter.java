@@ -1,4 +1,4 @@
-package edu.niitict.highlightfootball.Adapter;
+package edu.niitict.highlightfootball.adapter;
 
 import java.util.List;
 

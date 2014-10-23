@@ -27,8 +27,8 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 
 import edu.niitict.highlightfootball.R;
-import edu.niitict.highlightfootball.Adapter.ChanelAdapter;
 import edu.niitict.highlightfootball.Utils.Const;
+import edu.niitict.highlightfootball.adapter.ChanelAdapter;
 import edu.niitict.highlightfootball.app.AppController;
 import edu.niitict.highlightfootball.main.model.ChanelModel;
 
