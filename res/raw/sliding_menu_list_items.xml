@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+    	<item id="1" name="Home" icon="@drawable/ic_action_emo_angry_holo_dark" />
+		<item id="2" name="Video" icon="@drawable/ic_action_emo_basic_holo_dark" />
+		<item id="3" name="Favorite" icon="@drawable/ic_action_emo_cool_holo_dark" />
+		<item id="4" name="My Chanel" icon="@drawable/ic_action_emo_cry_holo_dark" />
+		<item id="5" name="Help" icon="@drawable/ic_action_emo_err_holo_dark" />
+		<item id="6" name="About" icon="@drawable/ic_action_emo_evil_holo_dark" />		
+</items>
