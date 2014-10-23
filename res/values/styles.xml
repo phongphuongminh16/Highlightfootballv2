@@ -1,39 +1,50 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
-    <style name="AppBaseAlternativeTheme" parent="android:Theme.Holo.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
     <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
 
-    <style name="AppAlternativeTheme" parent="AppBaseAlternativeTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <!-- For the resting Spinner style -->
+        <!--
+             <item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>
+
+        For each individual Spinner list item once clicked on
+        <item name="android:spinnerDropDownItemStyle"> @style/spinnerDropDownItemStyle</item>
+        -->
     </style>
 
-    <style name="CustomUpIndicatorTheme" parent="AppAlternativeTheme">
-        <item name="android:homeAsUpIndicator">@drawable/ic_up_indicator</item>
-        <!-- Text color actionbar. -->
-        <item name="android:actionBarTabTextStyle">@style/MyActionBarTabTextStyle</item>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#3B5998</item>
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
     </style>
 
-    <style name="MyActionBarTabTextStyle" parent="android:style/Widget.Holo.Light.ActionBar.TabText">
-        <item name="android:textColor">@color/tab_text_color</item>
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="spinnerItemStyle">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">9pt</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">10pt</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
 </resources>
